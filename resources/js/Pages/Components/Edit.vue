@@ -1,10 +1,10 @@
 <script setup>
 import { router } from '@inertiajs/vue3';
 
-defineProps({ user: Object })
+const props = defineProps({ user: Object })
 
-let name = ''
-let email = ''
+let name = props.user.name
+let email = props.user.email
 
 function update(id) {
     router.put(`/users/${id}`, {
