@@ -10,7 +10,7 @@ function openModal(id) {
 }
 
 function handleDelete(id) {
-    router.delete(`/users/${id}`, { preserveScroll: true })
+    router.delete(`/users/${id}`, { preserveScroll: true, preserveState: false })
 }
 
 </script>
